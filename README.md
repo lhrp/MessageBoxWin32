@@ -44,3 +44,6 @@ Retorno do Método `exibirMensagemQuestionamento`:
   - **`0`**: Se o usuário clicar em Cancelar, Não, Anular ou Ignorar
   - **`1`**: Se o usuário clicar em OK ou Sim
   - **`2`**: Se o usuário clicar em Tentar Novamente
+
+
+[Link para o PyPi](https://pypi.org/project/MessageBoxWin32/)
