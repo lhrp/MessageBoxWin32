@@ -6,7 +6,7 @@ long_description = (HERE / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="MessageBoxWin32",
-    version="0.1.1",
+    version="0.1.4",
     description="Caixas de diálogo Windows MessageBox via ctypes (sem Tkinter, porém especificamente para Windows).",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -19,4 +19,7 @@ setup(
         "Operating System :: Microsoft :: Windows",
     ],
     python_requires=">=3.6",
+    install_requires=[
+        "wxPython==4.2.3"
+    ],
 )

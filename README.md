@@ -4,7 +4,9 @@ Este pacote permite criar caixas de diálogo do Windows usando a função Messag
 
 É ideal para aplicações que precisam de uma interface simples de alerta ou confirmação no Windows.
 
-Esta biblioteca depende apenas do CTYPES, que vem instalado por padrão junto do Python.
+Esta biblioteca depende de:
+- ctypes (Que vem instalado por padrão junto do Python)
+- wxPython
 
 Ressaltando que a mesma é para uso apenas em ambiente Windows.
 ```
@@ -15,6 +17,7 @@ Métodos disponíveis:
 - `exibirMensagemInformacao`: Exibe uma caixa de mensagem com um ícone de informação.
 - `exibirMensagemErro`: Exibe uma caixa de mensagem com um ícone de erro.
 - `exibirMensagemQuestionamento`: Exibe uma caixa de mensagem com opções de ação, como OK, Cancelar, Sim, Não, etc.
+- `solicitarTexto`: Exibe uma caixa de texto, para que o usuário informe um texto. Caso cancelado, será retornado ""
 
 Parametros Gerais:
 - `mensagem`: A mensagem a ser exibida na caixa de diálogo.
@@ -24,7 +27,6 @@ Parametros do Método `exibirMensagemQuestionamento`:
 - `acao`: Define os tipos de ações que o usuário pode tomar.
 
 - O parâmetro `acao` pode ser:
-
 
   - **`1`**: OK e Cancelar
   - **`2`**: Sim, Não e Cancelar

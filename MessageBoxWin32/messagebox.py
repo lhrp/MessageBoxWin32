@@ -1,4 +1,5 @@
 import ctypes
+import wx
 
 # Botões
 MB_OK                = 0x00000000
@@ -30,6 +31,7 @@ IDIGNORE   = 5
 IDYES      = 6
 IDNO       = 7
 
+_app = wx.App(False)
 
 def exibirMensagem(mensagem: str, titulo: str = "") -> int:
     """
@@ -119,3 +121,14 @@ def exibirMensagemQuestionamento(mensagem: str, titulo: str = "Erro", acao: str 
         validaRetorno = 2
 
     return validaRetorno
+
+def solicitarTexto(mensagem: str = "Digite algo:", titulo: str = "Entrada de Texto") -> str:
+    """
+    Exibe uma caixa de diálogo para solicitar entrada de texto do usuário.
+    :param mensagem: A mensagem a ser exibida na caixa de diálogo.
+    :param titulo: O título da caixa de diálogo.
+    :return: str - Retorna o texto inserido pelo usuário ou uma string vazia se o usuário cancelar.
+    """
+
+    retorno = wx.GetTextFromUser(message=mensagem, caption=titulo, default_value="")
+    return retorno
