@@ -1,0 +1,18 @@
+# Diretórios e arquivos gerados pelo processo de build e empacotamento
+
+# Diretórios de build
+build/
+dist/
+pip-wheel-metadata/
+
+# Metadata de pacotes
+*.egg-info/
+.egg-info/
+
+# Logs de instalação do pip
+pip-log.txt
+
+# Arquivos de cache do setuptools
+*.egg
+# Arquivos de cache do pip
+pip-*.log
